@@ -1,0 +1,93 @@
+name: "prosys-opc-ua-simulation-server"
+manufacturer: "Prosys"
+model: "Simulation"
+labels:
+- "opc-ua"
+- "opc-ua-server"
+- "virtual"
+description: "Prosys OPC UA Simulation Server is a stand-alone OPC UA server that let's you configure your own simulation environment."
+deviceResources:
+- name: "Counter1"
+  description: "an integer number ranging from 0 to 100, and increase 1 each second"
+  attributes:
+    namespaceIndex: "5"
+    identifier: "Counter1"
+  properties:
+    value:
+      type: "Integer"
+      size: 32
+      readWrite: "WR"
+      defaultValue: 0
+      minimum: 0
+      maximum: 100
+    units:
+      type: "String"
+      readWrite: "R"
+      defaultValue: "Counter"
+- name: "Random1"
+  description: "a random floating value ranging from 0 to 1"
+  attributes:
+    namespaceIndex: 5
+    identifier: "Random1"
+  properties:
+    value:
+      type: "Float"
+      size: 32
+      readWrite: "R"
+      precision: "1.17"
+      defaultValue: 0
+      minimum: 0
+      maximum: 1
+    units:
+      type: "String"
+      readWrite: "R"
+      defaultValue: "Random"
+resources:
+- name: "Counter1"
+  get:
+  - operation: "get"
+    object: "Counter1"
+    property: "value"
+    parameter: "Counter1"
+  set:
+  - operation: "set"
+    object: "Counter1"
+    property: "value"
+    parameter: "Counter1"
+- name: "Random1"
+  get:
+  - operation: "get"
+    object: "Random1"
+    property: "value"
+    parameter: "Random1"
+commands:
+- name: "Counter1"
+  get:
+    path: "/api/v1/device/{deviceId}/Counter1"
+    responses:
+    - code: "200"
+      description: "OK"
+      expectedValues: ["Counter1"]
+    - code: "503"
+      description: "service unavailable"
+      expectedValues: []
+  put:
+    path: "/api/v1/device/{deviceId}/Counter1"
+    parameterNames: ["Counter1"]
+    responses:
+    - code: "200"
+      description: "OK"
+      expectedValues: []
+    - code: "503"
+      description: "service unavailable"
+      expectedValues: []
+- name: "Random1"
+  get:
+    path: "/api/v1/device/{deviceId}/Random1"
+    responses:
+    - code: "200"
+      description: "OK"
+      expectedValues: ["Random1"]
+    - code: "503"
+      description: "service unavailable"
+      expectedValues: []

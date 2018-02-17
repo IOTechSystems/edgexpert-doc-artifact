@@ -1,0 +1,15 @@
+name: "prosys-opc-ua-simulation-server1"
+adminState: "UNLOCKED"
+operatingState: "ENABLED"
+addressable:
+  name: "prosys-opc-ua-simulation-server1-address"
+  protocol: "OTHER"
+  address: "localhost"
+  port: 53530
+  path: "OPCUA/SimulationServer"
+profile:
+  name: "prosys-opc-ua-simulation-server"
+labels:
+- "opc-ua"
+- "opc-ua-server"
+- "virtual"

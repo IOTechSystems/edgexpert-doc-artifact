@@ -1,0 +1,315 @@
+name: "NI-cRIO-9038"
+manufacturer: "National Instruments"
+model: "cRIO-9038"
+labels:
+- "opc-ua"
+- "opc-ua-server"
+- "physical"
+description: "Embedded CompactRIO Controller with Real-Time Processor and Reconfigurable FPGA"
+deviceResources:
+- name: "DI0"
+  description: "device input 0"
+  attributes:
+    namespaceIndex: 2
+    identifier: "Device.IOs.DI0"
+  properties:
+    value:
+      type: "Boolean"
+      readWrite: "R"
+      defaultValue: true
+    units:
+      type: "String"
+      readWrite: "R"
+      defaultValue: "on"
+- name: "DI1"
+  description: "device input 1"
+  attributes:
+    namespaceIndex: 2
+    identifier: "Device.IOs.DI1"
+  properties:
+    value:
+      type: "Boolean"
+      readWrite: "R"
+      defaultValue: true
+    units:
+      type: "String"
+      readWrite: "R"
+      defaultValue: "on"
+- name: "DI2"
+  description: "device input 2"
+  attributes:
+    namespaceIndex: 2
+    identifier: "Device.IOs.DI2"
+  properties:
+    value:
+      type: "Boolean"
+      readWrite: "R"
+      defaultValue: true
+    units:
+      type: "String"
+      readWrite: "R"
+      defaultValue: "on"
+- name: "DI3"
+  description: "device input 3"
+  attributes:
+    namespaceIndex: 2
+    identifier: "Device.IOs.DI3"
+  properties:
+    value:
+      type: "Boolean"
+      readWrite: "R"
+      defaultValue: true
+    units:
+      type: "String"
+      readWrite: "R"
+      defaultValue: "on"
+- name: "DO0"
+  description: "device output 0"
+  attributes:
+    namespaceIndex: 2
+    identifier: "Device.IOs.DO0"
+  properties:
+    value:
+      type: "Boolean"
+      readWrite: "WR"
+      defaultValue: true
+    units:
+      type: "String"
+      readWrite: "R"
+      defaultValue: "on"
+- name: "DO1"
+  description: "device output 1"
+  attributes:
+    namespaceIndex: 2
+    identifier: "Device.IOs.DO1"
+  properties:
+    value:
+      type: "Boolean"
+      readWrite: "WR"
+      defaultValue: true
+    units:
+      type: "String"
+      readWrite: "R"
+      defaultValue: "on"
+- name: "DO2"
+  description: "device output 2"
+  attributes:
+    namespaceIndex: 2
+    identifier: "Device.IOs.DO2"
+  properties:
+    value:
+      type: "Boolean"
+      readWrite: "WR"
+      defaultValue: true
+    units:
+      type: "String"
+      readWrite: "R"
+      defaultValue: "on"
+- name: "DO3"
+  description: "device output 3"
+  attributes:
+    namespaceIndex: 2
+    identifier: "Device.IOs.DO3"
+  properties:
+    value:
+      type: "Boolean"
+      readWrite: "WR"
+      defaultValue: true
+    units:
+      type: "String"
+      readWrite: "R"
+      defaultValue: "on"
+resources:
+- name: "DI0"
+  get:
+  - operation: "get"
+    object: "DI0"
+    property: value
+    parameter: "DI0"
+- name: "DI1"
+  get:
+  - operation: "get"
+    object: "DI1"
+    property: value
+    parameter: "DI1"
+- name: "DI2"
+  get:
+  - operation: "get"
+    object: "DI2"
+    property: value
+    parameter: "DI2"
+- name: "DI3"
+  get:
+  - operation: "get"
+    object: "DI3"
+    property: value
+    parameter: "DI3"
+- name: "DO0"
+  get:
+  - operation: "get"
+    object: "DO0"
+    property: value
+    parameter: "DO0"
+  set:
+  - operation: "set"
+    object: "DO0"
+    property: value
+    parameter: "DO0"
+- name: "DO1"
+  get:
+  - operation: "get"
+    object: "DO1"
+    property: value
+    parameter: "DO1"
+  set:
+  - operation: "set"
+    object: "DO1"
+    property: value
+    parameter: "DO1"
+- name: "DO2"
+  get:
+  - operation: "get"
+    object: "DO2"
+    property: value
+    parameter: "DO2"
+  set:
+  - operation: "set"
+    object: "DO2"
+    property: value
+    parameter: "DO2"
+- name: "DO3"
+  get:
+  - operation: "get"
+    object: "DO3"
+    property: value
+    parameter: "DO3"
+  set:
+  - operation: "set"
+    object: "DO3"
+    property: value
+    parameter: "DO3"
+commands:
+- name: "DI0"
+  get:
+    path: "/api/v1/device/{deviceId}/DI0"
+    responses:
+    - code: "200"
+      description: "OK"
+      expectedValues: ["DI0"]
+    - code: "503"
+      description: "service unavailable"
+      expectedValues: []
+- name: "DI1"
+  get:
+    path: "/api/v1/device/{deviceId}/DI1"
+    responses:
+    - code: "200"
+      description: "OK"
+      expectedValues: ["DI1"]
+    - code: "503"
+      description: "service unavailable"
+      expectedValues: []
+- name: "DI2"
+  get:
+    path: "/api/v1/device/{deviceId}/DI2"
+    responses:
+    - code: "200"
+      description: "OK"
+      expectedValues: ["DI2"]
+    - code: "503"
+      description: "service unavailable"
+      expectedValues: []
+- name: "DI3"
+  get:
+    path: "/api/v1/device/{deviceId}/DI3"
+    responses:
+    - code: "200"
+      description: "OK"
+      expectedValues: ["DI3"]
+    - code: "503"
+      description: "service unavailable"
+      expectedValues: []
+- name: "DO0"
+  get:
+    path: "/api/v1/device/{deviceId}/DO0"
+    responses:
+    - code: "200"
+      description: "OK"
+      expectedValues:
+      - "DO0"
+    - code: "503"
+      description: "service unavailable"
+      expectedValues: []
+  put:
+    path: "/api/v1/device/{deviceId}/DO0"
+    parameterNames: ["DO0"]
+    responses:
+    - code: "200"
+      description: "OK"
+      expectedValues: []
+    - code: "503"
+      description: "service unavailable"
+      expectedValues: []
+- name: "DO1"
+  get:
+    path: "/api/v1/device/{deviceId}/DO1"
+    responses:
+    - code: "200"
+      description: "OK"
+      expectedValues:
+      - "DO1"
+    - code: "503"
+      description: "service unavailable"
+      expectedValues: []
+  put:
+    path: "/api/v1/device/{deviceId}/DO1"
+    parameterNames: ["DO1"]
+    responses:
+    - code: "200"
+      description: "OK"
+      expectedValues: []
+    - code: "503"
+      description: "service unavailable"
+      expectedValues: []
+- name: "DO2"
+  get:
+    path: "/api/v1/device/{deviceId}/DO2"
+    responses:
+    - code: "200"
+      description: "OK"
+      expectedValues:
+      - "DO2"
+    - code: "503"
+      description: "service unavailable"
+      expectedValues: []
+  put:
+    path: "/api/v1/device/{deviceId}/DO2"
+    parameterNames: ["DO2"]
+    responses:
+    - code: "200"
+      description: "OK"
+      expectedValues: []
+    - code: "503"
+      description: "service unavailable"
+      expectedValues: []
+- name: "DO3"
+  get:
+    path: "/api/v1/device/{deviceId}/DO3"
+    responses:
+    - code: "200"
+      description: "OK"
+      expectedValues:
+      - "DO3"
+    - code: "503"
+      description: "service unavailable"
+      expectedValues: []
+  put:
+    path: "/api/v1/device/{deviceId}/DO3"
+    parameterNames: ["DO3"]
+    responses:
+    - code: "200"
+      description: "OK"
+      expectedValues: []
+    - code: "503"
+      description: "service unavailable"
+      expectedValues: []

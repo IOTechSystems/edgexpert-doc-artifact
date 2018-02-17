@@ -1,0 +1,15 @@
+name: "NI-cRIO-9038-1"
+adminState: "UNLOCKED"
+operatingState: "ENABLED"
+addressable:
+  name: "NI-cRIO-9038-1-address"
+  protocol: "OTHER"
+  address: "localhost"
+  port: 53530
+  path: 
+profile:
+  name: "NI-cRIO-9038"
+labels:
+- "opc-ua"
+- "opc-ua-server"
+- "physical"
