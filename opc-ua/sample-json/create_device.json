@@ -1,0 +1,1 @@
+{"name":"prosys-opc-ua-simulation-server1","description":"PROSYS OPC UA Simulation Server","adminState":"UNLOCKED","operatingState":"ENABLED","addressable":{"name":"prosys-opc-ua-simulation-server1-address"},"labels":["opc-ua","opc-ua-server","virtual"],"location":"{lat:45.45,long:47.80}","service":{"name":"device-opc-ua"},"profile":{"name":"prosys-opc-ua-simulation-server"}}
