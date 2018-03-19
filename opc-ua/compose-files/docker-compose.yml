@@ -264,7 +264,7 @@ services:
 
 
   device-opc-ua:
-    image: docker.iotechsys.com/edgex/docker-device-opc-ua:built
+    image: docker.iotechsys.com/edgexpert/device-opc-ua:built
     ports:
       - "59090:59090"
     container_name: edgex-device-opc-ua
