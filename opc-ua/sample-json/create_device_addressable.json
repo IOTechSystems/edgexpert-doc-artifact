@@ -1,1 +1,1 @@
-{"name":"prosys-opc-ua-simulation-server1-address","protocol":"OTHER","address":"192.168.0.193","port":53530,"path":"OPCUA/SimulationServer","publisher":"none","user":"none","password":"none","topic":"none"}
+{"name":"prosys-opc-ua-simulation-server1-address","protocol":"OTHER","address":"192.168.11.10","port":53530,"path":"OPCUA/SimulationServer","publisher":"organization","user":"/certs","password":"","topic":"BASIC128RSA15_SIGN_ENCRYPT"}
